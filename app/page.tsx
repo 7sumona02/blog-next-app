@@ -1,9 +1,6 @@
 import React from 'react'
-import prisma from '@/lib/prisma'
-import Post from '@/components/Post';
-import Link from "next/link"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
-import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationLink, PaginationEllipsis, PaginationNext } from "@/components/ui/pagination"
+import prisma from '../lib/prisma';
+import Post from '../components/Post';
 
 async function getPosts(){
   const posts = await prisma.post.findMany({
